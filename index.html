@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Shop</title>
+    <!-- Tailwind link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #spinner {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="container mx-auto bg-gray-100">
+    <header>
+      <h1 class="text-4xl font-bold text-slate-700 text-center my-3">
+        Book <span class="text-rose-700">S</span>hop
+      </h1>
+    </header>
+    <main>
+      <div class="text-center mb-10">
+        <input
+          type="text"
+          id="search-book"
+          class="w-3/4 md:w-3/6 p-2 outline-none"
+          placeholder="Search your favourite book"
+        />
+        <button
+          onclick="searchBooks()"
+          class="bg-amber-300 text-white px-4 py-2 hover:bg-amber-400"
+        >
+          Search
+        </button>
+      </div>
+      <!-- spinner -->
+      <div id="spinner">
+        <p class="text-3xl text-center">Loading...</p>
+      </div>
+
+      <!-- search result -->
+      <section id="main-container">
+        <div
+          id="book-container"
+          class="grid gap-5 justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+        ></div>
+      </section>
+    </main>
+    <!-- Script -->
+    <script src="app.js"></script>
+  </body>
+</html>
